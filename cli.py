@@ -8,7 +8,7 @@ print("Time is ", now)
 
 while True:
 
-    user_action = input("Tpye add,show,edit,complete,exit:")
+    user_action = input("Type add,show,edit,complete,exit:")
     user_action = user_action.strip()
 
     if user_action.startswith('add'):
