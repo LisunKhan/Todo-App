@@ -1,12 +1,17 @@
 import function
 import PySimpleGUI as psg
 import time
+import os
+
+if not os.path.exists("Todo.txt"):
+    with open("Todo.txt", "w") as file:
+        pass
 
 psg.theme("Black")
 clock = psg.Text('',key="clock")
 label = psg.Text("Type in a to-do")
 input_box = psg.InputText(tooltip="Enter to-do", key="todo")
-add_button = psg.Button("Add")
+add_button = psg.Button("ADD")
 list_box = psg.Listbox(values=function.get_todos(), key="todos",
                        enable_events=True, size=[45, 10])
 edit_button = psg.Button("Edit")
